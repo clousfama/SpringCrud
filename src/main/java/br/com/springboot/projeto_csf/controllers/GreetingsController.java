@@ -31,15 +31,8 @@ public class GreetingsController {
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
-	
-	
-	
+	   
     
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
-    public String greetingText(@PathVariable String name) {
-        return "Curso Spring Boot API: " + name + "!";
-    } 
     
     @RequestMapping(value = "/olamundo/{nome}" , method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
