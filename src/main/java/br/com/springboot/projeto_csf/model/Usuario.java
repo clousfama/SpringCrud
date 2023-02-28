@@ -1,7 +1,6 @@
 package br.com.springboot.projeto_csf.model;
 
 import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +15,11 @@ public class Usuario implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_usuario")
-	private Long id;
+	private Long id; 
 	
 	private String nome;
+	
+	private int idade;
 	
 	public Long getId() {
 		return id;
@@ -43,7 +44,5 @@ public class Usuario implements Serializable {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-
-	private int idade;
 
 }

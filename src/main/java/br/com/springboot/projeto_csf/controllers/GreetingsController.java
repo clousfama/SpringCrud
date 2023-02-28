@@ -51,14 +51,14 @@ public class GreetingsController {
     	
     	List<Usuario> usuarios = usuarioRepository.findAll(); /*Executa a consulta no banco de dados*/
     	
-    	return new ResponseEntity<java.util.List<Usuario>>(usuarios, HttpStatus.OK); /*Retorna uma lista em JSON*/ 	
+    	return new ResponseEntity<List<Usuario>>(usuarios, HttpStatus.OK); /*Retorna uma lista em JSON*/ 	
     	   	
       			
-	}
+	} 
    
-    @PostMapping(value = "salvar")
-    @ResponseBody
-    public ResponseEntity<Usuario> salvar (@RequestBody Usuario usuario){
+    @PostMapping(value = "salvar")/* mapeia a url*/
+    @ResponseBody /* descrição da resposta */
+    public ResponseEntity<Usuario> salvar (@RequestBody Usuario usuario ){ /* recebe os dados para salvar */
     	
     	Usuario user = usuarioRepository.save(usuario);
     	
